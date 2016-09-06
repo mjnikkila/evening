@@ -1,11 +1,7 @@
 require("backbone-relational");
 require("backbone.epoxy");
 
-var evening_cache = {
-
-};
-
-module.exports = {
+global.Evening = {
     run: function(app) {
         app();
     },
