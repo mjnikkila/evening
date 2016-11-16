@@ -5,6 +5,10 @@ module.exports = function() {
             collection: {}
         },
 
+        _routes: {
+
+        },
+
         Model: Backbone.Epoxy.Model.extend({
 
         }),
@@ -31,6 +35,12 @@ module.exports = function() {
                     attributes = this.model.attributes;
                 this.$el.html(template(attributes));
                 return this;
+            }
+        }),
+
+        Router: Backbone.Router.extend({
+            start: function(opts) {
+                Backbone.history.start(opts);
             }
         }),
 
