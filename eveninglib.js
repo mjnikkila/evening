@@ -68,6 +68,10 @@ module.exports = function() {
                 return false;
             }
 
+            if(!_.has(this._repository, type)) {
+                this._repository[type] = {};
+            }
+
             if(_.isUndefined(name) || _.isNaN(name) || !_.isString(name)) {
                 name = _.uniqueId(type);
             }
