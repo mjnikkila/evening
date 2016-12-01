@@ -34,6 +34,11 @@ module.exports = function() {
                 if(_.has(this, "model") && _.has(this.model, "attributes"))
                     attributes = this.model.attributes;
                 this.$el.html(template(attributes));
+
+                if(_.has(this.__proto__, "post_render")) {
+                    this.post_render();
+                }
+
                 return this;
             }
         }),
