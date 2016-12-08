@@ -45,8 +45,8 @@ Evening is built with following libraries and then is bundled using webpack.
     ├── src                    # Source files (place your code here)
     │   ├── app                
     │   │   ├── context        # Contains models and collections called context
-    │   │   │   ├── view       # Contains views and templates
-    │   │   │   ├── app.js     # Your app initialization file
+    │   │   ├── view           # Contains views and templates
+    │   │   ├── app.js         # Your app initialization file
     ├── init.js                # Evening init file
     ├── package.json           # npm package file
     ├── README.md              # This file
