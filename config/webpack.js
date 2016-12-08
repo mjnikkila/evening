@@ -23,7 +23,10 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.css$/, loader: "style!css" },
-            { test: /\.html$/, loader: "html-loader" }
+            { test: /\.html$/, loader: "html-loader" },
+            { test: /\.png$/, loader: "file-loader" },
+            { test: /\.gif$/, loader: "file-loader" },
+            { test: /\.jpg$/, loader: "file-loader" }
         ]
     },
 
@@ -33,7 +36,7 @@ module.exports = {
             Backbone : "backbone",
             _ : "underscore"
         }),
-        /*
+
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false
@@ -42,6 +45,5 @@ module.exports = {
                 comments: false
             }
         })
-        */
     ]
 };
