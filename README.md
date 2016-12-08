@@ -23,7 +23,7 @@ To make your work straight forward we solved a bunch of common problems for you.
 * Easy two-way-bindings
 * Nesting
 * Bundling
-* Easy developement with webpack-dev-server
+* Easy development with webpack-dev-server
 
 ## What's baked in?
 
@@ -33,10 +33,10 @@ and having long term support.
 
 Evening is built with following libraries and then is bundled using webpack.
 
-* jQuery
-* Backbone stack (backbonejs & underscorejs)
-* Epoxyjs for elegant data bindings
-* webpack and it's webpack-dev-server
+* [jQuery](https://jquery.com)
+* Backbone stack ([Backbone.js](http://backbonejs.org) & [Underscore.js](http://underscorejs.org))
+* [Epoxyjs](http://epoxyjs.org) for elegant data bindings
+* [Webpack](https://webpack.github.io) and it's webpack-dev-server
 
 ## Structure
 
