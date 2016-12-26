@@ -11,12 +11,12 @@ module.exports = {
 
     resolve: {
         root: [
-            path.resolve(__dirname,"..","src","lib"), // todo: If there is nothing more than this consider putting it as an alias
             path.resolve(__dirname,"..","node_modules")
         ],
         alias: {
             view: path.resolve(__dirname,"..","..","..","src","app","view"),
-            context: path.resolve(__dirname,"..","..","..","src","app","context")
+            context: path.resolve(__dirname,"..","..","..","src","app","context"),
+            lib: path.resolve(__dirname,"..","..","..","src","app","lib"),
         }
     },
 
