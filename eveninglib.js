@@ -25,7 +25,7 @@ module.exports = function() {
                     this.construct(attributes);
                 }
 
-                Evening.repositoryAdd(this, attributes.name);
+                Evening.repository.add(this, attributes.name);
             },
 
             render: function() {
@@ -53,48 +53,50 @@ module.exports = function() {
             app();
         },
 
-        repositoryAdd: function(object, name, type) {
-            if(_.isUndefined(object) || !_.isObject(object)) {
-                console.error("Cannot add non object into repository");
-                return false;
-            }
-
-            if(_.isUndefined(type)) {
-                if(object instanceof this.View) {
-                    type = "view";
-                } else if(object instanceof this.Collection) {
-                    type = "collection";
+        repository: {
+            add: function(object, name, type) {
+                if(_.isUndefined(object) || !_.isObject(object)) {
+                    console.error("Cannot add non object into repository");
+                    return false;
                 }
-            }
 
-            if(_.isUndefined(type) || !_.isString(type)) {
-                console.error("Could not add repository item of unknown type");
-                console.error(object);
+                if(_.isUndefined(type)) {
+                    if(object instanceof Evening.View) {
+                        type = "view";
+                    } else if(object instanceof Evening.Collection) {
+                        type = "collection";
+                    }
+                }
+
+                if(_.isUndefined(type) || !_.isString(type)) {
+                    console.error("Could not add repository item of unknown type");
+                    console.error(object);
+                    return false;
+                }
+
+                if(!_.has(Evening._repository, type)) {
+                    Evening._repository[type] = {};
+                }
+
+                if(_.isUndefined(name) || _.isNaN(name) || !_.isString(name)) {
+                    name = _.uniqueId(type);
+                }
+
+                if(_.has(Evening._repository[type], name)) {
+                    console.error(name + " already exists in the view repository");
+                    return false;
+                }
+
+                Evening._repository[type][name] = object;
+                return true;
+            },
+
+            get: function(type, name) {
+                if(_.has(Evening._repository, type) && _.has(Evening._repository[type], name)) {
+                    return Evening._repository[type][name];
+                }
                 return false;
             }
-
-            if(!_.has(this._repository, type)) {
-                this._repository[type] = {};
-            }
-
-            if(_.isUndefined(name) || _.isNaN(name) || !_.isString(name)) {
-                name = _.uniqueId(type);
-            }
-
-            if(_.has(this._repository[type], name)) {
-                console.error(name + " already exists in the view repository");
-                return false;
-            }
-
-            this._repository[type][name] = object;
-            return true;
-        },
-
-        repositoryGet: function(type, name) {
-            if(_.has(this._repository, type) && _.has(this._repository[type], name)) {
-                return this._repository[type][name];
-            }
-            return false;
         }
     }
 };
