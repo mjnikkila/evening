@@ -1,6 +1,6 @@
 {
   "name": "evening",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "A light weight bundle to create elegant web applications",
   "main": "evening.js",
   "dependencies": {
