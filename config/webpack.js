@@ -30,6 +30,11 @@ module.exports = {
         ]
     },
 
+    htmlLoader: {
+        //minimize: true,
+        removeAttributeQuotes: false
+    },
+
     plugins: [
         new webpack.ProvidePlugin({
             $ : "jquery",
