@@ -7,12 +7,12 @@ projects or prototyping ideas.
 Install using npm:
 
     npm install evening --save
-    
+
 ... or use it as a dependency in your package.json file
-    
+
 ## Getting started
 
-To get started you might want to check [evening-todo](https://github.com/mjnikkila/evening-todo) - 
+To get started you might want to check [evening-todo](https://github.com/mjnikkila/evening-todo) -
 an example app following [TodoMVC](https://github.com/tastejs/todomvc/blob/master/app-spec.md) guidelines.
 
 ## Why?
@@ -43,16 +43,28 @@ Evening is built with following libraries and then is bundled using webpack.
     ├── app
     │   ├── bundle.js          # Automatically created by bundler process
     ├── src                    # Source files (place your code here)
-    │   ├── app                
+    │   ├── app
     │   │   ├── context        # Contains models and collections called context
     │   │   ├── view           # Contains views and templates
     │   │   ├── app.js         # Your app initialization file
     ├── init.js                # Evening init file
     ├── package.json           # npm package file
     ├── README.md              # This file
-    
+
 ## Documentation
 
 For up to date documentation and tutorials see [eveningjs.org](http://eveningjs.org)
 
-  
+## License
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+See LICENSE.txt fro more details
