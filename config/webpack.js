@@ -22,7 +22,7 @@ module.exports = {
 
     module: {
         loaders: [
-            { test: /\.css$/, loader: "style!css" },
+            { test: /\.css$/, loader: "style-loader!css-loader"},
             { test: /\.html$/, loader: "html-loader" },
             { test: /\.png$/, loader: "file-loader" },
             { test: /\.gif$/, loader: "file-loader" },
