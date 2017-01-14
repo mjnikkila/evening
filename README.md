@@ -1,6 +1,6 @@
-# Eveningjs
+# Evening.js
 
-Light weight bundle to create elegant web applications. Evening is designed for small
+A light weight bundle to create elegant web applications. Evening is designed for small
 projects or prototyping ideas.
 
 ## Installing
@@ -27,29 +27,29 @@ To make your work straight forward we solved a bunch of common problems for you.
 
 ## What's baked in?
 
-Evening is not state of the art solution with all the fancy stuff like real js
-frameworks. It is built with rock solid technologies proven in production
+Evening is not a framework, but it can evolve as such. It bundles rock solid technologies proven in production
 and having long term support.
 
-Evening is built with following libraries and then is bundled using webpack.
+Evening.js bundles and uses following libraries.
 
 * [jQuery](https://jquery.com)
 * Backbone stack ([Backbone.js](http://backbonejs.org) & [Underscore.js](http://underscorejs.org))
+* [Backbone-relational](http://backbonerelational.org) for relating models
 * [Epoxyjs](http://epoxyjs.org) for elegant data bindings
 * [Webpack](https://webpack.github.io) and it's webpack-dev-server
 
-## Structure
+## Application structure
 
-    ├── app
-    │   ├── bundle.js          # Automatically created by bundler process
+    ├── app                    # Contains your production files
+    │   ├── bundle.js          # Automatically created by building process
     ├── src                    # Source files (place your code here)
     │   ├── app
     │   │   ├── context        # Contains models and collections called context
     │   │   ├── view           # Contains views and templates
     │   │   ├── app.js         # Your app initialization file
-    ├── init.js                # Evening init file
+    │   ├── lib                # Reserved for external libraries
+    ├── init.js                # Evening.js init file
     ├── package.json           # npm package file
-    ├── README.md              # This file
 
 ## Documentation
 
