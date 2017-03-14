@@ -16,7 +16,7 @@ module.exports = {
         alias: {
             view: path.resolve(__dirname,"..","..","..","src","app","view"),
             context: path.resolve(__dirname,"..","..","..","src","app","context"),
-            lib: path.resolve(__dirname,"..","..","..","src","app","lib"),
+            lib: path.resolve(__dirname,"..","..","..","src","app","lib")
         }
     },
 
