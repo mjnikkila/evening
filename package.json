@@ -17,13 +17,20 @@
     "webpack-dev-server": "^1.15.0"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
+    "jsdom": "^9.12.0",
+    "jsdom-global": "^2.1.1",
     "mocha": "^3.2.0",
+    "mocha-jsdom": "^1.1.0",
     "mocha-webpack": "^0.7.0",
+    "should": "^11.2.1",
+    "webpack-node-externals": "^1.5.4",
     "webpack-shell-plugin": "^0.5.0"
   },
   "scripts": {
     "prod": "webpack --config ./config/webpack.js",
-    "dev": "webpack-dev-server --config ./config/webpack.js"
+    "dev": "webpack-dev-server --config ./config/webpack.js",
+    "test": "mocha-webpack --webpack-config ./config/webpack.test.js -r jsdom-global/register \"test/run/basic.js\""
   },
   "author": "Mika Nikkilä",
   "license": "GPL-3.0"
