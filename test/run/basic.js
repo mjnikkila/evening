@@ -15,8 +15,8 @@ describe('Evening.js test suite tests', function () {
 
         require("backbone-relational");
         require("backbone.epoxy");
-        var Evening = require("../../eveninglib.js");
-        global.Evening = new Evening();
+        var EveningLib = require("../../eveninglib.js");
+        global.Evening = new EveningLib();
 
         describe("Evening.Model", function() {
             it("should be possible to create new model object", function() {
@@ -26,18 +26,18 @@ describe('Evening.js test suite tests', function () {
             });
         });
 
-        /*
         describe("Evening.View", function() {
             it("should be automatically stored upon construct when name attribute given", function() {
-                var testView = new Evening.View({
+                var v_test = require("view/general/general");
+                var testView = new v_test({
                     name: "testView",
                     el: "body"
                 });
 
                 var testView2 = Evening.repository.get("view", "testView");
-                testView2.should.be.an.instanceOf(testView)
+
+                testView2.should.be.an.instanceOf(Evening.View);
             });
         });
-        */
     });
 });
